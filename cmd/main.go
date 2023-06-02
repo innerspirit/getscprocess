@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/innerspirit/getscprocess/lib"
 )
 
 func main() {
-	proc, port, err := getscprocess.getProcessInfo(false)
+	proc, port, err := lib.GetProcessInfo(false)
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 		os.Exit(1)

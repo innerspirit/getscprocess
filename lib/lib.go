@@ -1,4 +1,4 @@
-package getscprocess
+package lib
 
 import (
 	"bufio"
@@ -174,7 +174,7 @@ func findWorkingPort(ports []int) (int, error) {
 }
 
 // getProcessInfo finds the StarCraft process ID and then finds the open port we need to use.
-func getProcessInfo(onlyGetProcessID bool) (int, int, error) {
+func GetProcessInfo(onlyGetProcessID bool) (int, int, error) {
 	proc, err := getProcessID(processNames)
 
 	if err != nil {
